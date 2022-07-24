@@ -15,41 +15,16 @@ struct ContentView: View {
 	
 	var body: some View {
 		VStack(spacing: 20) {
-			Text(notificationsEnabled ? "Notifications Enabled" : "Notifications Disabled")
-				.font(.title3)
-				.fontWeight(.semibold)
-				.foregroundColor(notificationsEnabled ? .green : .red)
+			NotificationStatusView(notificationsEnabled: $notificationsEnabled)
+				.padding(.top)
 			
-			if (!notificationsEnabled) {
-				Button {
-					print("Test")
-					
-					UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-						
-						
-						if success {
-							print("all set!")
-							notificationsEnabled = true
-						} else if let error = error {
-							print(error.localizedDescription)
-						}
-					}
-				} label: {
-					Text("Request Permission")
-						.padding()
-				}
-				.buttonStyle(.bordered)
-				.tint(.blue)
-			}
+			Spacer()
 			
-			Button {
+			NTButton(title: "Configure Notification") {
 				showNoticationConfiguratorView = true
-			} label: {
-				Text("Schedule Notification")
-					.padding()
 			}
-			.buttonStyle(.bordered)
-			.tint(.blue)
+			
+			Spacer()
 		}
 		.onAppear {
 			UNUserNotificationCenter.current().requestAuthorization { granted, error in

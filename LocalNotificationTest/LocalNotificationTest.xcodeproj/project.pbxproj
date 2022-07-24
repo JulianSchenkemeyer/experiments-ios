@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B95DEAF9288D8D0100055411 /* NotificationStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */; };
+		B95DEAFA288D8D0100055411 /* NotificationStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */; };
+		B95DEAFC288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */; };
+		B95DEAFD288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */; };
+		B95DEAFF288D8E5E00055411 /* NTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAFE288D8E5E00055411 /* NTButton.swift */; };
+		B95DEB00288D8E5E00055411 /* NTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAFE288D8E5E00055411 /* NTButton.swift */; };
+		B95DEB02288D924900055411 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEB01288D924900055411 /* NotificationHelper.swift */; };
+		B95DEB03288D924900055411 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEB01288D924900055411 /* NotificationHelper.swift */; };
 		B9C90C38288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */; };
 		B9C90C39288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */; };
 		B9C90C3A288441B6000D91E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C29288441B3000D91E5 /* ContentView.swift */; };
@@ -18,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatusView.swift; sourceTree = "<group>"; };
+		B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermissionView.swift; sourceTree = "<group>"; };
+		B95DEAFE288D8E5E00055411 /* NTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTButton.swift; sourceTree = "<group>"; };
+		B95DEB01288D924900055411 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTestApp.swift; sourceTree = "<group>"; };
 		B9C90C29288441B3000D91E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B9C90C2A288441B6000D91E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +71,10 @@
 			children = (
 				B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */,
 				B9C90C29288441B3000D91E5 /* ContentView.swift */,
+				B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */,
+				B95DEB01288D924900055411 /* NotificationHelper.swift */,
+				B95DEAFE288D8E5E00055411 /* NTButton.swift */,
+				B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */,
 				B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */,
 				B9C90C2A288441B6000D91E5 /* Assets.xcassets */,
 			);
@@ -181,8 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C90C4728845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */,
+				B95DEAF9288D8D0100055411 /* NotificationStatusView.swift in Sources */,
+				B95DEAFC288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
 				B9C90C3A288441B6000D91E5 /* ContentView.swift in Sources */,
 				B9C90C38288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */,
+				B95DEAFF288D8E5E00055411 /* NTButton.swift in Sources */,
+				B95DEB02288D924900055411 /* NotificationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +211,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C90C4828845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */,
+				B95DEAFA288D8D0100055411 /* NotificationStatusView.swift in Sources */,
+				B95DEAFD288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
 				B9C90C3B288441B6000D91E5 /* ContentView.swift in Sources */,
 				B9C90C39288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */,
+				B95DEB00288D8E5E00055411 /* NTButton.swift in Sources */,
+				B95DEB03288D924900055411 /* NotificationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
