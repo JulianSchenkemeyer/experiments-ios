@@ -28,5 +28,13 @@ final class NotificationHelper {
 			}
 		}
 	}
+	
+	static func scheduleNotification(_ content: UNMutableNotificationContent, with trigger: UNNotificationTrigger) {
+		// choose a random identifier
+		let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+		
+		// add our notification request
+		UNUserNotificationCenter.current().add(request)
+	}
 
 }
