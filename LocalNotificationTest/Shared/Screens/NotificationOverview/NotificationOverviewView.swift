@@ -26,12 +26,7 @@ struct NotificationOverviewView: View {
 			Spacer()
 		}
 		.onAppear {
-			UNUserNotificationCenter.current().requestAuthorization { granted, error in
-				
-				print("Can receive notifications: \(granted)")
-				viewModel.notificationsEnabled = granted
-			}
-		}
+			viewModel.getNotificationStatus()		}
 		.sheet(isPresented: $viewModel.showNoticationConfiguratorView) {
 			ConfigureNotificationView(isShowing: $viewModel.showNoticationConfiguratorView)
 		}
