@@ -19,8 +19,8 @@
 		B95DEB06288DA52A00055411 /* NTFormSubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEB04288DA52A00055411 /* NTFormSubmitButton.swift */; };
 		B9C90C38288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */; };
 		B9C90C39288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */; };
-		B9C90C3A288441B6000D91E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C29288441B3000D91E5 /* ContentView.swift */; };
-		B9C90C3B288441B6000D91E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C29288441B3000D91E5 /* ContentView.swift */; };
+		B9C90C3A288441B6000D91E5 /* NotificationOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C29288441B3000D91E5 /* NotificationOverviewView.swift */; };
+		B9C90C3B288441B6000D91E5 /* NotificationOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C29288441B3000D91E5 /* NotificationOverviewView.swift */; };
 		B9C90C3C288441B6000D91E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C90C2A288441B6000D91E5 /* Assets.xcassets */; };
 		B9C90C3D288441B6000D91E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C90C2A288441B6000D91E5 /* Assets.xcassets */; };
 		B9C90C4728845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */; };
@@ -34,7 +34,7 @@
 		B95DEB01288D924900055411 /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		B95DEB04288DA52A00055411 /* NTFormSubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTFormSubmitButton.swift; sourceTree = "<group>"; };
 		B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationTestApp.swift; sourceTree = "<group>"; };
-		B9C90C29288441B3000D91E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B9C90C29288441B3000D91E5 /* NotificationOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOverviewView.swift; sourceTree = "<group>"; };
 		B9C90C2A288441B6000D91E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9C90C2F288441B6000D91E5 /* LocalNotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C90C35288441B6000D91E5 /* LocalNotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +60,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B95DEB072896BF0600055411 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B95DEB0A2896BFF600055411 /* ConfigureNotification */,
+				B95DEB092896BFE700055411 /* NotificationOverview */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B95DEB082896BFDF00055411 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */,
+				B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */,
+				B95DEB0B2896C01A00055411 /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B95DEB092896BFE700055411 /* NotificationOverview */ = {
+			isa = PBXGroup;
+			children = (
+				B9C90C29288441B3000D91E5 /* NotificationOverviewView.swift */,
+			);
+			path = NotificationOverview;
+			sourceTree = "<group>";
+		};
+		B95DEB0A2896BFF600055411 /* ConfigureNotification */ = {
+			isa = PBXGroup;
+			children = (
+				B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */,
+			);
+			path = ConfigureNotification;
+			sourceTree = "<group>";
+		};
+		B95DEB0B2896C01A00055411 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B95DEAFE288D8E5E00055411 /* NTButton.swift */,
+				B95DEB04288DA52A00055411 /* NTFormSubmitButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B95DEB0C2896C05700055411 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B95DEB01288D924900055411 /* NotificationHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B9C90C22288441B3000D91E5 = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +124,10 @@
 		B9C90C27288441B3000D91E5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B95DEB0C2896C05700055411 /* Helper */,
+				B95DEB082896BFDF00055411 /* Views */,
+				B95DEB072896BF0600055411 /* Screens */,
 				B9C90C28288441B3000D91E5 /* LocalNotificationTestApp.swift */,
-				B9C90C29288441B3000D91E5 /* ContentView.swift */,
-				B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */,
-				B95DEB01288D924900055411 /* NotificationHelper.swift */,
-				B95DEAFE288D8E5E00055411 /* NTButton.swift */,
-				B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */,
-				B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */,
-				B95DEB04288DA52A00055411 /* NTFormSubmitButton.swift */,
 				B9C90C2A288441B6000D91E5 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -204,7 +252,7 @@
 				B95DEB05288DA52A00055411 /* NTFormSubmitButton.swift in Sources */,
 				B95DEAF9288D8D0100055411 /* NotificationStatusView.swift in Sources */,
 				B95DEAFC288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
-				B9C90C3A288441B6000D91E5 /* ContentView.swift in Sources */,
+				B9C90C3A288441B6000D91E5 /* NotificationOverviewView.swift in Sources */,
 				B9C90C38288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */,
 				B95DEAFF288D8E5E00055411 /* NTButton.swift in Sources */,
 				B95DEB02288D924900055411 /* NotificationHelper.swift in Sources */,
@@ -219,7 +267,7 @@
 				B95DEB06288DA52A00055411 /* NTFormSubmitButton.swift in Sources */,
 				B95DEAFA288D8D0100055411 /* NotificationStatusView.swift in Sources */,
 				B95DEAFD288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
-				B9C90C3B288441B6000D91E5 /* ContentView.swift in Sources */,
+				B9C90C3B288441B6000D91E5 /* NotificationOverviewView.swift in Sources */,
 				B9C90C39288441B6000D91E5 /* LocalNotificationTestApp.swift in Sources */,
 				B95DEB00288D8E5E00055411 /* NTButton.swift in Sources */,
 				B95DEB03288D924900055411 /* NotificationHelper.swift in Sources */,

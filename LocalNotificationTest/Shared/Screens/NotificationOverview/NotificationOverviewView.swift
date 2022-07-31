@@ -8,7 +8,7 @@
 import SwiftUI
 import UserNotifications
 
-struct ContentView: View {
+struct NotificationOverviewView: View {
 	
 	@State private var notificationsEnabled = false
 	@State private var showNoticationConfiguratorView = false
@@ -41,6 +41,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		NotificationOverviewView()
 	}
 }
