@@ -12,6 +12,7 @@ import UserNotifications
 struct ConfigureNotificationView: View {
 	
 	@StateObject var viewModel = ConfigureNotificationViewModel()
+	@Binding var isShowing: Bool
 	
 	var body: some View {
 		VStack {
@@ -45,6 +46,7 @@ struct ConfigureNotificationView: View {
 				
 				NTFormSubmitButton {
 					viewModel.configureNotification()
+					isShowing = false
 				}
 			}
 		}
@@ -53,6 +55,6 @@ struct ConfigureNotificationView: View {
 
 struct ConfigureNotificationView_Previews: PreviewProvider {
 	static var previews: some View {
-		ConfigureNotificationView()
+		ConfigureNotificationView(isShowing: .constant(true))
 	}
 }

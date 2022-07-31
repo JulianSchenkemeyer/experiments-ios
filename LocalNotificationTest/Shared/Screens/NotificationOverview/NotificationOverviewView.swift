@@ -10,18 +10,17 @@ import UserNotifications
 
 struct NotificationOverviewView: View {
 	
-	@State private var notificationsEnabled = false
-	@State private var showNoticationConfiguratorView = false
+	@StateObject var viewModel = NotificationOverviewModel()
 	
 	var body: some View {
 		VStack(spacing: 20) {
-			NotificationStatusView(notificationsEnabled: $notificationsEnabled)
+			NotificationStatusView(notificationsEnabled: $viewModel.notificationsEnabled)
 				.padding(.top)
 			
 			Spacer()
 			
 			NTButton(title: "Configure Notification") {
-				showNoticationConfiguratorView = true
+				viewModel.showNoticationConfiguratorView = true
 			}
 			
 			Spacer()
@@ -30,11 +29,11 @@ struct NotificationOverviewView: View {
 			UNUserNotificationCenter.current().requestAuthorization { granted, error in
 				
 				print("Can receive notifications: \(granted)")
-				notificationsEnabled = granted
+				viewModel.notificationsEnabled = granted
 			}
 		}
-		.sheet(isPresented: $showNoticationConfiguratorView) {
-			ConfigureNotificationView()
+		.sheet(isPresented: $viewModel.showNoticationConfiguratorView) {
+			ConfigureNotificationView(isShowing: $viewModel.showNoticationConfiguratorView)
 		}
 	}
 }
