@@ -10,15 +10,18 @@ import UserNotifications
 
 
 struct RequestNotificationPermissionView: View {
+	@Binding var notificationsEnabled: Bool
+	
     var body: some View {
 		NTButton(title: "Request Permission") {
 			NotificationHelper.requestNotificationPermission()
+			notificationsEnabled = true
 		}
     }
 }
 
 struct RequestNotificationPermissionView_Previews: PreviewProvider {
     static var previews: some View {
-        RequestNotificationPermissionView()
+		RequestNotificationPermissionView(notificationsEnabled: .constant(false))
     }
 }

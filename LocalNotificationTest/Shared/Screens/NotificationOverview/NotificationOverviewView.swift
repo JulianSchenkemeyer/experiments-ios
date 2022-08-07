@@ -19,8 +19,12 @@ struct NotificationOverviewView: View {
 			
 			Spacer()
 			
-			NTButton(title: "Configure Notification") {
-				viewModel.showNoticationConfiguratorView = true
+			if (viewModel.notificationsEnabled) {
+				NTButton(title: "Configure Notification") {
+					viewModel.showNoticationConfiguratorView = true
+				}
+			} else {
+				RequestNotificationPermissionView(notificationsEnabled: $viewModel.notificationsEnabled)
 			}
 			
 			Spacer()
