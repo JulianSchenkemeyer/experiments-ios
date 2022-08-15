@@ -27,7 +27,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 	// Handle notifications received when the app is in foreground
 	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
 		// Show only a badge when the app is in foreground
-		return [.badge]
+		return [.banner]
 	}
 }
 
