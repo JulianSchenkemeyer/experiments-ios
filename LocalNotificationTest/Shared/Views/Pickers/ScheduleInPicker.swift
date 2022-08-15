@@ -8,36 +8,23 @@
 import SwiftUI
 
 
-enum ScheduleInOptions: Int, CaseIterable, Identifiable {
-	case ten = 10
-	case twenty = 20
-	case thirty = 30
-	case fourty = 40
-	case fifty = 50
-	case sixty = 60
-	case seventy = 70
-	case eighty = 80
-	
-	var id: Int { Int(self.rawValue) }
-}
-
 struct ScheduleInPicker: View {
 	
 	@Binding var selectedScheduleInOption: Int
 	
-    var body: some View {
+	var body: some View {
 		Picker("Seconds", selection: $selectedScheduleInOption) {
-			ForEach(ScheduleInOptions.allCases) {
-				option in
-				Text("\(option.rawValue)").tag(option.rawValue)
+			ForEach(1 ..< 31) { i in
+				let timesTen = i * 10
+				Text("\(timesTen) seconds").tag(timesTen)
 			}
 		}
 		.pickerStyle(WheelPickerStyle())
-    }
+	}
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		ScheduleInPicker(selectedScheduleInOption: .constant(30))
-    }
+	}
 }
