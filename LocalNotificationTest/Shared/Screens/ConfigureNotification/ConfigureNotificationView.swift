@@ -25,22 +25,13 @@ struct ConfigureNotificationView: View {
 				}
 				
 				Section("Trigger") {
-					Picker("Options", selection: $viewModel.selectedTriggerOption) {
-						ForEach(TriggerOptions.allCases) { option in
-							Text(option.rawValue).tag(option)
-						}
-					}
-					.pickerStyle(SegmentedPickerStyle())
+					ScheduleOptionsPicker(selectedTriggerOption: $viewModel.selectedTriggerOption)
 					
-					if (viewModel.selectedTriggerOption == .ScheduleIn) {
+					if viewModel.selectedTriggerOption == .ScheduleIn {
 						
-						Picker("Seconds", selection: $viewModel.selectedTimeIntervalOption) {
-							ForEach(ScheduleInOptions.allCases) {
-								option in
-								Text("\(option.rawValue)").tag(option.rawValue)
-							}
-						}
-						.pickerStyle(WheelPickerStyle())
+						ScheduleInPicker(selectedScheduleInOption: $viewModel.selectedScheduleInOption)
+					} else {
+						ScheduleAtPicker(selectedDateOption: $viewModel.selectedScheduleAtOption)
 					}
 				}
 				

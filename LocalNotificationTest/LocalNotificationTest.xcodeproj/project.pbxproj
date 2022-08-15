@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B938249D28A0328200E0C5E7 /* ScheduleInPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938249C28A0328200E0C5E7 /* ScheduleInPicker.swift */; };
+		B938249E28A0328200E0C5E7 /* ScheduleInPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938249C28A0328200E0C5E7 /* ScheduleInPicker.swift */; };
+		B93824A028A032CD00E0C5E7 /* ScheduleAtPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938249F28A032CD00E0C5E7 /* ScheduleAtPicker.swift */; };
+		B93824A128A032CD00E0C5E7 /* ScheduleAtPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B938249F28A032CD00E0C5E7 /* ScheduleAtPicker.swift */; };
 		B95DEAF9288D8D0100055411 /* NotificationStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */; };
 		B95DEAFA288D8D0100055411 /* NotificationStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */; };
 		B95DEAFC288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */; };
@@ -29,9 +33,13 @@
 		B9C90C3D288441B6000D91E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C90C2A288441B6000D91E5 /* Assets.xcassets */; };
 		B9C90C4728845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */; };
 		B9C90C4828845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */; };
+		B9DEDF1A28AA9B3700959FA3 /* ScheduleOptionsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DEDF1928AA9B3700959FA3 /* ScheduleOptionsPicker.swift */; };
+		B9DEDF1B28AA9B3700959FA3 /* ScheduleOptionsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DEDF1928AA9B3700959FA3 /* ScheduleOptionsPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B938249C28A0328200E0C5E7 /* ScheduleInPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInPicker.swift; sourceTree = "<group>"; };
+		B938249F28A032CD00E0C5E7 /* ScheduleAtPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAtPicker.swift; sourceTree = "<group>"; };
 		B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStatusView.swift; sourceTree = "<group>"; };
 		B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermissionView.swift; sourceTree = "<group>"; };
 		B95DEAFE288D8E5E00055411 /* NTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTButton.swift; sourceTree = "<group>"; };
@@ -46,6 +54,7 @@
 		B9C90C35288441B6000D91E5 /* LocalNotificationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalNotificationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C90C37288441B6000D91E5 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B9C90C4628845FA7000D91E5 /* ConfigureNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNotificationView.swift; sourceTree = "<group>"; };
+		B9DEDF1928AA9B3700959FA3 /* ScheduleOptionsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleOptionsPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B938249B28A0326A00E0C5E7 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				B938249C28A0328200E0C5E7 /* ScheduleInPicker.swift */,
+				B938249F28A032CD00E0C5E7 /* ScheduleAtPicker.swift */,
+				B9DEDF1928AA9B3700959FA3 /* ScheduleOptionsPicker.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
 		B95DEB072896BF0600055411 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +97,7 @@
 		B95DEB082896BFDF00055411 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B938249B28A0326A00E0C5E7 /* Pickers */,
 				B95DEAFB288D8DD900055411 /* RequestNotificationPermissionView.swift */,
 				B95DEAF8288D8D0100055411 /* NotificationStatusView.swift */,
 				B95DEB0B2896C01A00055411 /* Buttons */,
@@ -257,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C90C4728845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */,
+				B93824A028A032CD00E0C5E7 /* ScheduleAtPicker.swift in Sources */,
 				B95DEB05288DA52A00055411 /* NTFormSubmitButton.swift in Sources */,
+				B938249D28A0328200E0C5E7 /* ScheduleInPicker.swift in Sources */,
 				B95DEAF9288D8D0100055411 /* NotificationStatusView.swift in Sources */,
+				B9DEDF1A28AA9B3700959FA3 /* ScheduleOptionsPicker.swift in Sources */,
 				B95DEAFC288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
 				B95DEB112896CBC500055411 /* NotificationOverviewViewModel.swift in Sources */,
 				B9C90C3A288441B6000D91E5 /* NotificationOverviewView.swift in Sources */,
@@ -274,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C90C4828845FA7000D91E5 /* ConfigureNotificationView.swift in Sources */,
+				B93824A128A032CD00E0C5E7 /* ScheduleAtPicker.swift in Sources */,
 				B95DEB06288DA52A00055411 /* NTFormSubmitButton.swift in Sources */,
+				B938249E28A0328200E0C5E7 /* ScheduleInPicker.swift in Sources */,
 				B95DEAFA288D8D0100055411 /* NotificationStatusView.swift in Sources */,
+				B9DEDF1B28AA9B3700959FA3 /* ScheduleOptionsPicker.swift in Sources */,
 				B95DEAFD288D8DD900055411 /* RequestNotificationPermissionView.swift in Sources */,
 				B95DEB122896CBC500055411 /* NotificationOverviewViewModel.swift in Sources */,
 				B9C90C3B288441B6000D91E5 /* NotificationOverviewView.swift in Sources */,
