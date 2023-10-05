@@ -11,6 +11,7 @@
 		24003AC62ACF140200FAC94E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24003AC52ACF140200FAC94E /* ContentView.swift */; };
 		24003AC82ACF140300FAC94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24003AC72ACF140300FAC94E /* Assets.xcassets */; };
 		24003ACB2ACF140300FAC94E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24003ACA2ACF140300FAC94E /* Preview Assets.xcassets */; };
+		24003AD22ACF143000FAC94E /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24003AD12ACF143000FAC94E /* Expense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		24003AC52ACF140200FAC94E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		24003AC72ACF140300FAC94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24003ACA2ACF140300FAC94E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24003AD12ACF143000FAC94E /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				24003AC32ACF140200FAC94E /* SwiftDataExampleApp.swift */,
 				24003AC52ACF140200FAC94E /* ContentView.swift */,
+				24003AD12ACF143000FAC94E /* Expense.swift */,
 				24003AC72ACF140300FAC94E /* Assets.xcassets */,
 				24003AC92ACF140300FAC94E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24003AD22ACF143000FAC94E /* Expense.swift in Sources */,
 				24003AC62ACF140200FAC94E /* ContentView.swift in Sources */,
 				24003AC42ACF140200FAC94E /* SwiftDataExampleApp.swift in Sources */,
 			);
