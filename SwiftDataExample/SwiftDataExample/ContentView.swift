@@ -12,13 +12,23 @@ struct ContentView: View {
     @Environment(\.modelContext) var context
     
     @State private var isShowingItemSheet = false
-    @Query(sort: \Expense.date) var expenses: [Expense]
+    @Query(sort: \Expense.date, order: .reverse) var expenses: [Expense]
+    @State private var selectedExpense: Expense?
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(expenses) { expense in
-                    Text(expense.name)
+                    HStack {
+                        Text(expense.date, format: .dateTime.month(.abbreviated).day())
+                            .frame(width: 70, alignment: .leading)
+                        Text(expense.name)
+                        Spacer()
+                        Text(expense.value, format: .currency(code: "USD"))
+                    }
+                    .onTapGesture {
+                        selectedExpense = expense
+                    }
                 }
                 .onDelete { indexSet in
                     for index in indexSet {
@@ -29,9 +39,15 @@ struct ContentView: View {
             .navigationTitle("Expenses")
             .navigationBarTitleDisplayMode(.large)
             .sheet(isPresented: $isShowingItemSheet) { AddExpenseSheet() }
+            .sheet(item: $selectedExpense, onDismiss: {
+                selectedExpense = nil
+            }, content: { expense in
+                UpdateExpenseSheet(expense: expense)
+            })
             .toolbar {
                 if !expenses.isEmpty {
                     Button("Add Expense", systemImage: "plus") {
+                        print(expenses)
                         isShowingItemSheet = true
                     }
                 }
@@ -68,7 +84,7 @@ struct AddExpenseSheet: View {
             Form {
                 TextField("Expense Name", text: $name)
                 DatePicker("Date", selection: $date, displayedComponents: .date)
-                TextField("Value", value: $value, format: .currency(code: "Eur"))
+                TextField("Value", value: $value, format: .currency(code: "USD"))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("New Expense")
@@ -81,10 +97,32 @@ struct AddExpenseSheet: View {
                     Button("Save") { 
                         let expense = Expense(name: name, date: date, value: value)
                         context.insert(expense)
-                        
-//                        try! context.save()
+                    
                         dismiss()
                     }
+                }
+            }
+        }
+    }
+}
+
+struct UpdateExpenseSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    @Bindable var expense: Expense
+    
+    var body: some View {
+        NavigationStack {
+            Form {
+                TextField("Expense Name", text: $expense.name)
+                DatePicker("Date", selection: $expense.date, displayedComponents: .date)
+                TextField("Value", value: $expense.value, format: .currency(code: "USD"))
+                    .keyboardType(.decimalPad)
+            }
+            .navigationTitle("Update Expense")
+            .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button("Done") { dismiss() }
                 }
             }
         }
